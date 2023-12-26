@@ -63,7 +63,7 @@ const BoneMining = ({ bone }: { bone: Bone }) => {
         }).catch((err) => {
           setShowDialog(false)
           setNonce(ethers.BigNumber.from(0))
-          });
+        });
     });
   };
 
@@ -86,7 +86,7 @@ const BoneMining = ({ bone }: { bone: Bone }) => {
         <div className="text-xl p-3">Difficulty: {bone.difficulty}</div>
         <div className="text-xl p-3">
           <Progress
-            value={(100 * parseInt(bone.remainSupply)) / parseInt(bone.max)}
+            value={(1 - parseInt(bone.remainSupply) / parseInt(bone.max)) * 100}
           />
         </div>
         <div className="text-xl p-3">

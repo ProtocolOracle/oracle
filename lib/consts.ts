@@ -19,7 +19,7 @@ export const getBoneList = async () => {
     const max = 2100000
     // const tick = await contract.tick()
     const tick = "BONE"
-    const minted = ethers.BigNumber.from(await contract.counter()).toNumber()
+    const minted = ethers.BigNumber.from(await contract.counter()).toNumber() + 1482123
     const remainSupply = max - minted
     // const amt: string = await contract.amt()
     const amt = "1000"
